@@ -16,7 +16,7 @@ function AddProduct() {
         return toast.warn("All fields are required.");
       }
       setBtnLoading(true);
-      let res = await axios.post("https://trydol-task-server.vercel.app/api/product/add", {
+      let res = await axios.post("http://127.0.0.1:4001/api/product/add", {
         name,
         image,
         price,
