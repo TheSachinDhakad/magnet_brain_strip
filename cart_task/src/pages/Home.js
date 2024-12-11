@@ -32,7 +32,7 @@ function Home() {
   const fetAllProducts = async () => {
     try {
       setDataLoading(true);
-      let res = await axios.get("https://trydol-task-server.vercel.app/api/products");
+      let res = await axios.get("http://127.0.0.1:4001/api/products");
       let { status, message, data: apiData } = res.data || res;
       if (status) {
         setAllProducts(apiData);
